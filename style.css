@@ -1,0 +1,763 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #070744;
+    background: white;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+header {
+    height: 75px;
+    background: #f4f8ff;
+}
+
+.tepa {
+    width: 86%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.logo span {
+    color: #ffbd3e;
+    font-size: 38px;
+    transition: 0.4s;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+    letter-spacing: 1px;
+}
+
+.logo:hover span {
+    transform: rotate(20deg);
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    gap: 42px;
+}
+
+nav a {
+    color: #070744;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4b3ce8;
+    transform: translateY(-3px);
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #4b3ce8;
+    left: 50%;
+    bottom: -10px;
+    transition: 0.4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.kirish {
+    background: #4b3ce8;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.kirish:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 25px #4b3ce855;
+}
+
+.bosh {
+    height: 440px;
+    display: flex;
+    background: #f3f8ff;
+    overflow: hidden;
+
+}
+
+.bosh_matn {
+    width: 54%;
+    padding: 75px 0 0 13%;
+}
+
+.bosh_matn h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
+
+.bosh_matn h1:hover {
+    color: #4b3ce8;
+    transform: translateX(8px);
+    text-shadow: 5px 8px 20px #4b3ce844;
+}
+
+.bosh_matn p {
+    width: 500px;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.tugmalar {
+    display: flex;
+    gap: 15px;
+}
+
+.tugma {
+    position: relative;
+    padding: 15px 22px;
+    border-radius: 28px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.tugma:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 14px 25px #0003;
+}
+
+.tugma:active {
+    transform: scale(0.95);
+}
+
+.sariq {
+    background: #ffbd3e;
+    color: #070744;
+}
+
+.sariq:hover {
+    background: #ffcc5c;
+    box-shadow: 0 12px 25px #ffbd3e88;
+}
+
+.oq {
+    background: white;
+    border: 2px solid #070744;
+    color: #070744;
+}
+
+.oq:hover {
+    background: #070744;
+    color: white;
+}
+
+.bosh_rasm {
+    width: 46%;
+    background: #ffbd3e;
+    margin-top: 25px;
+    height: 370px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.bosh_rasm:hover {
+    transform: scale(1.02);
+}
+
+.bosh_rasm::before {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: #ffd86d;
+    right: -180px;
+    top: -130px;
+    transition: 0.7s;
+}
+
+.bosh_rasm:hover::before {
+    transform: scale(1.2) rotate(20deg);
+}
+
+.telefon {
+    width: 140px;
+    height: 280px;
+    background: #e5e8ed;
+    border: 7px solid #15153d;
+    border-radius: 20px;
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    padding: 15px 8px;
+    box-shadow: 15px 15px 25px #0004;
+    transition: 0.5s;
+}
+
+.bosh_rasm:hover .telefon {
+    transform: translateY(-15px) rotate(-4deg);
+    box-shadow: 25px 25px 35px #0005;
+}
+
+.telefon_top {
+    font-size: 11px;
+}
+
+.scan {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 5px solid #ffbd3e;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.telefon:hover .scan {
+    box-shadow: 0 0 25px #ffbd3e;
+}
+
+.telefon_text {
+    font-size: 10px;
+    line-height: 2;
+}
+
+.fikrlar {
+    background: #ffbd3e;
+    padding: 45px 0 0;
+    overflow: hidden;
+}
+
+.fikrlar h2 {
+    width: 86%;
+    margin: auto;
+    font-size: 30px;
+    transition: 0.4s;
+}
+
+.fikrlar h2:hover {
+    transform: translateX(10px);
+}
+
+.kartalar {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.fikr {
+    min-width: 290px;
+    height: 195px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.45s;
+    box-shadow: 0 5px 15px #0001;
+}
+
+.fikr:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 35px #0003;
+}
+
+.yulduz {
+    color: #ffae00;
+    font-size: 17px;
+    margin-bottom: 17px;
+    transition: 0.3s;
+}
+
+.fikr:hover .yulduz {
+    letter-spacing: 4px;
+}
+
+.fikr p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.fikr b {
+    font-size: 12px;
+}
+
+.brendlar {
+    height: 100px;
+    width: 86%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.brendlar b {
+    transition: 0.3s;
+}
+
+.brendlar b:hover {
+    transform: scale(1.15);
+    color: #4b3ce8;
+}
+
+.haqida {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    width: 74%;
+    margin: auto;
+    gap: 80px;
+}
+
+.haqida_matn {
+    width: 50%;
+}
+
+.haqida_matn h2 {
+    font-size: 32px;
+    margin-bottom: 22px;
+    transition: 0.4s;
+}
+
+.haqida_matn h2:hover {
+    color: #4b3ce8;
+    transform: translateX(8px);
+}
+
+.haqida_matn p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.haqida_matn .tugma {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.haqida_rasm {
+    width: 370px;
+    height: 300px;
+    background: #ffbd3e;
+    padding: 8px;
+    transition: 0.5s;
+}
+
+.haqida_rasm:hover {
+    transform: rotate(2deg) scale(1.04);
+    box-shadow: 15px 15px 30px #0003;
+}
+
+.haqida_rasm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.haqida_rasm:hover img {
+    transform: scale(1.05);
+}
+
+.xizmat {
+    background: #f0f7ff;
+    padding: 60px 0 80px;
+    text-align: center;
+}
+
+.xizmat > h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.xizmat_karta {
+    width: 650px;
+    min-height: 440px;
+    background: white;
+    border-radius: 25px;
+    margin: auto;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 25px;
+    box-shadow: 0 15px 35px #0002;
+    transition: 0.4s;
+}
+
+.xizmat_karta:hover {
+    box-shadow: 0 25px 50px #0003;
+}
+
+.xizmat_item {
+    transition: 0.4s;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.xizmat_item:hover {
+    transform: translateY(-10px);
+    background: #f4f8ff;
+    box-shadow: 0 10px 20px #0001;
+}
+
+.ikonka {
+    font-size: 35px;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+
+.xizmat_item:hover .ikonka {
+    transform: scale(1.25) rotate(8deg);
+}
+
+.xizmat_item h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.xizmat_item p {
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.xizmat_buttons {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.havolalar {
+    width: 60%;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kichik_karta {
+    width: 330px;
+    min-height: 170px;
+    padding: 28px;
+    border-radius: 22px;
+    transition: 0.4s;
+}
+
+.kichik_karta:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: 0 20px 30px #0002;
+}
+
+.sariq_fon {
+    background: #ffbd3e;
+}
+
+.kichik_karta h3,
+.help h3 {
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+.kichik_karta p,
+.help p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 17px;
+}
+
+.binafsha {
+    background: #4b3ce8;
+    color: white;
+    border-radius: 22px;
+    padding: 11px 20px;
+    font-size: 12px;
+    transition: 0.4s;
+}
+
+.binafsha:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px #4b3ce866;
+}
+
+.help {
+    width: 250px;
+    transition: 0.4s;
+}
+
+.help:hover {
+    transform: translateY(-8px);
+}
+
+.kichik_tugma {
+    padding: 11px 18px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #070744;
+    transition: 0.4s;
+}
+
+.kichik_tugma:hover {
+    background: #070744;
+    color: white;
+    transform: translateY(-4px);
+}
+
+.chaqiriq {
+    height: 280px;
+    background: #4036dc;
+    color: white;
+    text-align: center;
+    padding-top: 65px;
+}
+
+.chaqiriq h2 {
+    font-size: 30px;
+    margin-bottom: 22px;
+    transition: 0.4s;
+}
+
+.chaqiriq h2:hover {
+    transform: scale(1.05);
+}
+
+.chaqiriq p {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.shaffof {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.shaffof:hover {
+    background: white;
+    color: #4036dc;
+}
+
+.yangiliklar {
+    background: #f0f7ff;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.yangiliklar > h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.yangilik_kartalar {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.yangilik {
+    width: 250px;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 25px;
+    transition: 0.45s;
+}
+
+.yangilik:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px #0003;
+}
+
+.yangilik img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.yangilik:hover img {
+    transform: scale(1.08);
+}
+
+.yangilik span {
+    display: inline-block;
+    background: white;
+    border-radius: 15px;
+    padding: 7px 12px;
+    margin: -17px 0 12px 15px;
+    position: relative;
+    font-size: 10px;
+    box-shadow: 0 3px 10px #0002;
+}
+
+.yangilik h3 {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 18px;
+    margin-bottom: 12px;
+}
+
+.yangilik p {
+    font-size: 11px;
+    line-height: 1.6;
+    padding: 0 18px;
+}
+
+.yangiliklar > .tugma {
+    margin-top: 35px;
+}
+
+footer {
+    background: #05053e;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer_box {
+    width: 74%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.footer_left {
+    width: 30%;
+}
+
+.footer_left h3 {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social span {
+    width: 32px;
+    height: 32px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.social span:hover {
+    background: #ffbd3e;
+    color: #05053e;
+    transform: translateY(-7px) rotate(10deg);
+}
+
+.footer_left p {
+    font-size: 10px;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer_links h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.footer_links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.4s;
+}
+
+.footer_links a:hover {
+    color: #ffbd3e;
+    padding-left: 12px;
+}
+
+.newsletter {
+    background: #ffbd3e;
+    color: #05053e;
+    width: 320px;
+    height: 160px;
+    border-radius: 22px;
+    padding: 22px;
+    transition: 0.4s;
+}
+
+.newsletter:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px #0004;
+}
+
+.newsletter h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.newsletter p {
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+.email_box {
+    display: flex;
+}
+
+.email_box input {
+    width: 200px;
+    height: 35px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.submit {
+    width: 70px;
+    background: #05053e;
+    color: white;
+    font-size: 10px;
+    transition: 0.3s;
+}
+
+.submit:hover {
+    background: #4b3ce8;
+}
